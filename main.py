@@ -15,7 +15,7 @@ import os
 
 #----------------------- APP --------------------------------#
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY1")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 #------------------------------------------------------------#
@@ -45,7 +45,7 @@ def load_user(user_id):
 #--------------------------------------------------------------#
 
 #----------------------- CONNECT TO DB --------------------------------#
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL",  "sqlite:///blog.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1",  "sqlite:///blog.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #----------------------------------------------------------------------#
